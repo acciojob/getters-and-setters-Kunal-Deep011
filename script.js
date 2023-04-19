@@ -1,9 +1,10 @@
 //complete this code
+
 class Person {
-	constructor(name, age){
-		 this._name = name;
-          this._age = age;
-	}
+  constructor(name, age) {
+    this._name = name;
+    this._age = age;
+  }
 
   get name() {
     return this._name;
@@ -12,20 +13,28 @@ class Person {
   set age(age) {
     this._age = age;
   }
-	}
 }
 
 class Student extends Person {
-	this.study = function() {
-		console.log(this._name+" is studying");
-	}
+  constructor(name, age) {
+    super(name, age);
+  }
+
+  study() {
+    console.log(`${this._name} is studying`);
+  }
 }
 
 class Teacher extends Person {
-	this.teach = function(){
-		console.log(this._name+" is teaching");
-	}
+  constructor(name, age) {
+    super(name, age);
+  }
+
+  teach() {
+    console.log(`${this._name} is teaching`);
+  }
 }
+
 
 // Do not change the code below this line
 window.Person = Person;
